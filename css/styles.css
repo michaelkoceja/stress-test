@@ -1,3 +1,7 @@
+.output {
+  display: none;
+}
+
 body {
   background-image: url("https://az616578.vo.msecnd.net/files/responsive/cover/main/desktop/2016/04/22/6359694630551193681640755190_Stress-Management01.png");
   background-repeat: no-repeat;

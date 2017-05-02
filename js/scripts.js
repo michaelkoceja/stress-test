@@ -5,7 +5,7 @@ $(function(){
     var userWarnings = [];
     var userHealth = [];
     var userCoping = [];
-
+//Create loop to populate each empty array
     $("input:checkbox[name=warning-signs]:checked").each(function(){
       var warningSigns = $(this).val();
       userWarnings.push(warningSigns);
@@ -20,15 +20,18 @@ $(function(){
       var copingMethods = $(this).val();
       userCoping.push(copingMethods);
     });
-
-    if(userWarnings.length >= userCoping.length && health.length <= "3") {
-
+//Run if else to get outcomes
+    if(userWarnings.length >= userCoping.length && userHealth.length <= 3) {
+      $(".output").hide();
+      $("#outputWarning").show();
     }
-    else if (userWarnings.length < userCoping.length && health.length <= "3") {
-
+    else if (userWarnings.length < userCoping.length && userHealth.length <= 3) {
+      $(".output").hide();
+      $("#outputCoping").show();
     }
-    else if (health.length > "3") {
-
+    else if (userHealth.length > 3) {
+      $(".output").hide();
+      $("#outputHealth").show();
     }
   });
 });
